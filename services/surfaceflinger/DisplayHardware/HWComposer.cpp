@@ -646,6 +646,10 @@ status_t HWComposer::prepare() {
                     if (l.compositionType == HWC_FRAMEBUFFER) {
                         disp.hasFbComp = true;
                     }
+                    if (l.compositionType == HWC_OVERLAY) {
+                        disp.hasOvComp = true;
+                    }
+                }
                 if (disp.list->numHwLayers == (disp.framebufferTarget ? 1 : 0)) {
                     disp.hasFbComp = true;
                 }
